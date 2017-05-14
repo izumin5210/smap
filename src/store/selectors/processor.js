@@ -14,6 +14,7 @@ import mergeWith from 'lodash/mergeWith'
 import isArray from 'lodash/isArray'
 
 import SlideContainer from 'containers/SlideContainer'
+import { Image } from 'components/preview'
 
 import { getBody as getRawBody } from './entities/document'
 
@@ -37,7 +38,7 @@ const sanitize = mergeWith(
 
 const handlers = Object.assign({}, newpageDirectiveHandlers)
 const toHast = { handlers }
-const remarkReactComponents = { page: SlideContainer }
+const remarkReactComponents = { page: SlideContainer, img: Image }
 const rendererOptions = { sanitize, toHast, remarkReactComponents }
 
 const outlineProcessor = remark().use(remarkOutline).use(remarkRenderer)
