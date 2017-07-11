@@ -1,0 +1,41 @@
+{
+  "name": "react-ace-multisession",
+  "description": "React component for ACE editor supporting multi-edit-sessions",
+  "version": "0.0.1",
+  "author": {
+    "name": "Masayuki Izumi",
+    "email": "masayuki@izumin.info",
+    "url": "https://github.com/izumin5210"
+  },
+  "bugs": "https://github.com/izumin5210/OHP/issues",
+  "dependencies": {
+    "@types/react": "^15.0.34",
+    "brace": "^0.10.0"
+  },
+  "files": [
+    "dist/"
+  ],
+  "homepage": "https://github.com/izumin5210/OHP",
+  "jsnext:main": "dist/es/index.js",
+  "keywords": [
+    "ace",
+    "ace editor",
+    "brace",
+    "react",
+    "react-component"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/es/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/izumin5210/OHP"
+  },
+  "scripts": {
+    "build": "yarn build:js && yarn build:es",
+    "build:es": "tsc --target ES2016 --outDir ./dist/es",
+    "build:js": "tsc",
+    "clean": "rimraf dist",
+    "prepublish": "yarn run clean && yarn build"
+  }
+}

@@ -5,16 +5,17 @@ import type { KeyboardHandler } from 'types'
 
 export function getKeyboardHandler (): KeyboardHandler {
   const handler = localStorage.getItem(keys.keyboardHandler)
-  switch (handler) {
-    case '':
-    case 'vim':
-    case 'emacs':
-      return handler
-    default:
-      return ''
+  if (handler != null) {
+    // $FlowFixMe
+    return handler
   }
+  return null
 }
 
 export function setKeyboardHandler (handler: KeyboardHandler) {
-  localStorage.setItem(keys.keyboardHandler, handler)
+  if (handler != null) {
+    localStorage.setItem(keys.keyboardHandler, handler)
+  } else {
+    localStorage.removeItem(keys.keyboardHandler)
+  }
 }

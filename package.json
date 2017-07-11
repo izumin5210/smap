@@ -8,6 +8,7 @@
     "url": "https://github.com/izumin5210"
   },
   "devDependencies": {
+    "@types/jest": "^20.0.2",
     "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^20.0.3",
@@ -29,7 +30,9 @@
     "react-test-renderer": "^15.6.1",
     "remark": "^7.0.1",
     "remark-html": "^6.0.1",
-    "rimraf": "^2.6.1"
+    "rimraf": "^2.6.1",
+    "ts-jest": "^20.0.7",
+    "typescript": "^2.4.1"
   },
   "license": "MIT",
   "main": "index.js",

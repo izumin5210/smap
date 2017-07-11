@@ -5,5 +5,5 @@ export type Position = {
   column: number,
 }
 
-export type KeyboardHandler = 'vim' | 'emacs' | ''
+export type KeyboardHandler = 'vim' | 'emacs' | null
 export type FetchStatus = 'none' | 'loading' | 'loaded' | 'failed'

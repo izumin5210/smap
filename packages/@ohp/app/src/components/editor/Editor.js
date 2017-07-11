@@ -1,10 +1,6 @@
 // @flow
 import { PureComponent } from 'react'
-import AceEditor from 'react-ace'
-import 'brace/mode/markdown'
-import 'brace/theme/tomorrow'
-import 'brace/keybinding/vim'
-import 'brace/keybinding/emacs'
+import AceEditor from 'react-ace-multisession'
 
 import type { KeyboardHandler, Position } from 'types'
 import type Page from 'entities/Page'

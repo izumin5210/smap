@@ -16,7 +16,7 @@ export type EditorStateConfig = {
 
 const defaultValue: EditorStateConfig = {
   cursorPosition: { row: 0, column: 0 },
-  keyboardHandler: '',
+  keyboardHandler: null,
 }
 
 export class EditorState extends Record(defaultValue) {
